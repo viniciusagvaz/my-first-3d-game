@@ -25,10 +25,10 @@ point_count = 5
 
 [node name="Main" type="Node"]
 script = ExtResource("1_a10uo")
+mob_scene = ExtResource("2_hptyc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0120774, 0.999927, 0, -0.999927, 0.0120774, 207.125, 36.7354, 180.045)
-visible = false
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -75,3 +75,10 @@ transform = Transform3D(-0.99999, 3.49743e-06, -0.00436844, 1.13687e-13, 1, 0.00
 
 [node name="Mob" parent="." instance=ExtResource("2_hptyc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -4)
+visible = false
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
