@@ -20,13 +20,16 @@ shape = SubResource("BoxShape3D_i4k63")
 mesh = SubResource("BoxMesh_blkth")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.209768, 4.1678, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.209768, 14.9687, 7.24182)
 shadow_enabled = true
+shadow_bias = 0.0
 
 [node name="Player" parent="." instance=ExtResource("1_hdq3p")]
 
 [node name="CameraPivot" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 19)
-rotation_order = 0
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 19, 19)
 
-[node name="Camera" type="Camera3D" parent="CameraPivot"]
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19)
+projection = 1
+size = 19.0
