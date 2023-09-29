@@ -8,7 +8,7 @@ extends Node
 #3.Get the player's position.
 #4.Call the mob's initialize() method, passing it the random position and the player's position.
 #5.Add the mob as a child of the Main node.
-
+	
 func _on_mob_timer_timeout():
 	# Create a new instance of the Mob Scene
 	var mob = mob_scene.instantiate()

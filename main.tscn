@@ -73,7 +73,7 @@ mesh = SubResource("CylinderMesh_rd2qy")
 curve = SubResource("Curve3D_apapl")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(-0.99999, 3.49878e-06, -0.00437011, 3.4106e-13, 1, 0.000800615, 0.00437011, 0.000800607, -0.99999, 12.8908, 0.012085, -15.0574)
+transform = Transform3D(-0.999993, 1.46066e-06, -0.00363293, 5.68434e-14, 1, 0.000402061, 0.00363292, 0.000402059, -0.999993, 12.8908, 0.012085, -15.0574)
 
 [node name="Mob" parent="." instance=ExtResource("2_hptyc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -4)

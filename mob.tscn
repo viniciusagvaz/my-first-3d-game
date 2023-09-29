@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_cmwjv"]
 size = Vector3(1.48904, 2.04329, 2.58427)
 
-[node name="Mob" type="CharacterBody3D"]
+[node name="Mob" type="CharacterBody3D" groups=["mob"]]
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_3aysv")
