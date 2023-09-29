@@ -18,7 +18,7 @@ material = SubResource("StandardMaterial3D_4c4pn")
 
 [sub_resource type="Curve3D" id="Curve3D_apapl"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 12.8908, 0.012085, -15.0574, 0, 0, 0, 0, 0, 0, 13.0174, -0.0111084, 13.9118, 0, 0, 0, 0, 0, 0, -13, 0, 14, 0, 0, 0, 0, 0, 0, -13.0391, 0.0115967, -15.1308, 0, 0, 0, 0, 0, 0, 12.8908, 0.012085, -15.0574),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 12.8908, 0.012085, -15.0574, 0, 0, 0, 0, 0, 0, 13, 0, 15, 0, 0, 0, 0, 0, 0, -13, 0, 15, 0, 0, 0, 0, 0, 0, -13.0391, 0.0115967, -15.1308, 0, 0, 0, 0, 0, 0, 12.8908, 0.012085, -15.0574),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0)
 }
 point_count = 5
@@ -32,6 +32,8 @@ transform = Transform3D(1, 0, 0, 0, 0.0120774, 0.999927, 0, -0.999927, 0.0120774
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("BoxShape3D_i4k63")
@@ -56,7 +58,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 0, -15)
 mesh = SubResource("CylinderMesh_rd2qy")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Cylinders"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 14)
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 13, 0, 15)
 mesh = SubResource("CylinderMesh_rd2qy")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Cylinders"]
@@ -71,7 +73,7 @@ mesh = SubResource("CylinderMesh_rd2qy")
 curve = SubResource("Curve3D_apapl")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(-0.99999, 3.49743e-06, -0.00436844, 1.13687e-13, 1, 0.000800613, 0.00436844, 0.000800605, -0.99999, 12.8908, 0.012085, -15.0574)
+transform = Transform3D(-0.99999, 3.49878e-06, -0.00437011, 3.4106e-13, 1, 0.000800615, 0.00437011, 0.000800607, -0.99999, 12.8908, 0.012085, -15.0574)
 
 [node name="Mob" parent="." instance=ExtResource("2_hptyc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -4)
