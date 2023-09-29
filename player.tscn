@@ -11,7 +11,7 @@ height = 0.502935
 radius = 1.37457
 
 [node name="Player" type="CharacterBody3D"]
-collision_mask = 6
+collision_mask = 10
 script = ExtResource("1_vt4nf")
 
 [node name="Pivot" type="Node3D" parent="."]

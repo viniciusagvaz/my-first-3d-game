@@ -7,7 +7,7 @@
 size = Vector3(1.48904, 2.04329, 2.58427)
 
 [node name="Mob" type="CharacterBody3D" groups=["mob"]]
-collision_layer = 2
+collision_layer = 10
 collision_mask = 0
 script = ExtResource("1_3aysv")
 
@@ -19,8 +19,8 @@ script = ExtResource("1_3aysv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0355567, 0.228464, 0.118468)
 shape = SubResource("BoxShape3D_cmwjv")
 
-[node name="VisibilityNotifier" type="VisibleOnScreenEnabler3D" parent="."]
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenEnabler3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0192097, 0.18147, 0.269485)
 aabb = AABB(-1.20529, -0.841684, -1.72909, 2.41058, 1.68337, 3.45817)
 
-[connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_visibility_notifier_screen_exited"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier3D" to="." method="_on_visible_on_screen_notifier_3d_screen_exited"]
