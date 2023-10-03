@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://mkt863e33x33"]
+[gd_scene load_steps=14 format=3 uid="uid://mkt863e33x33"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_a10uo"]
 [ext_resource type="PackedScene" uid="uid://h8c1iidhndtn" path="res://player.tscn" id="1_hdq3p"]
@@ -8,6 +8,8 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tbjl6"]
 size = Vector3(35, 6, 1)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xkbj5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i4k63"]
 size = Vector3(60, 2, 60)
@@ -37,7 +39,11 @@ script = ExtResource("1_a10uo")
 mob_scene = ExtResource("2_hptyc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0120774, 0.999927, 0, -0.999927, 0.0120774, 207.125, 36.7354, 180.045)
+transform = Transform3D(1, 0, 0, 0, 0.270466, 0.96273, 0, -0.96273, 0.270466, 0.125, -35.2646, -5.95502)
+shadow_enabled = true
+shadow_reverse_cull_face = true
+shadow_opacity = 0.51
+directional_shadow_mode = 1
 
 [node name="Walls" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
@@ -64,6 +70,7 @@ shape = SubResource("BoxShape3D_tbjl6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 collision_layer = 4
 collision_mask = 0
+physics_material_override = SubResource("PhysicsMaterial_xkbj5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("BoxShape3D_i4k63")
