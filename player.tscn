@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://h8c1iidhndtn"]
+[gd_scene load_steps=9 format=3 uid="uid://h8c1iidhndtn"]
 
 [ext_resource type="PackedScene" uid="uid://cggq0davyirfx" path="res://art/player.glb" id="1_lm853"]
 [ext_resource type="Script" path="res://player.gd" id="1_vt4nf"]
@@ -66,10 +66,40 @@ tracks/1/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_hqt4e"]
+resource_name = "float_2"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pivot/Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.7, 1.2),
+"transitions": PackedFloat32Array(0.420448, 0.435275, 2.07053),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.65, 0), Vector3(0, 0.35, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pivot/Character:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.478325, 1.2),
+"transitions": PackedFloat32Array(0.420448, 0.435275, 2.07053),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.139626, 0, 0), Vector3(-0.15708, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yldyx"]
 _data = {
 "RESET": SubResource("Animation_4elee"),
-"float": SubResource("Animation_k0h6t")
+"float": SubResource("Animation_k0h6t"),
+"float_2": SubResource("Animation_hqt4e")
 }
 
 [node name="Player" type="CharacterBody3D"]
